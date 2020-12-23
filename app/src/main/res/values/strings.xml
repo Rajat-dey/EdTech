@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EdTech</string>
+    <string name="title_home">Home</string>
+    <string name="title_stream">Live Stream</string>
+    <string name="title_mentor">Find a Mentor</string>
+    <string name="title_profile">Profile</string>
+</resources>
