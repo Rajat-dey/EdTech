@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="155dp"
+    android:layout_height="241dp"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -12,10 +12,9 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_marginBottom="2dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="2dp"
-        card_view:cardCornerRadius="4dp"
+        card_view:cardCornerRadius="2dp"
         card_view:cardElevation="2dp"
         card_view:cardUseCompatPadding="true">
 
@@ -24,14 +23,38 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
 
                 <TextView
-                    android:id="@+id/city"
+
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/heart_1"
+                    />
+
+                <TextView
+                    android:id="@+id/likes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="10sp"
+                    android:textColor="#f2f2f2"
+                    android:text="2K Likes" />
+
+
+
+                <ImageView
+                    android:id="@+id/mentor_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/mentor_name"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -41,7 +64,7 @@
                     tools:text="My text" />
 
                 <TextView
-                    android:id="@+id/seat"
+                    android:id="@+id/designation"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -51,7 +74,17 @@
                     android:textColor="#ffffff"
                     tools:text="My text" />
 
-            </LinearLayout>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:gravity="center_horizontal"
+                    android:text="Book a slot" />
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -59,48 +92,71 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/ground_name"
-                    android:layout_width="0dp"
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#1A237E"
-                    android:gravity="center"
-                    android:textColor="@color/purple_500"
-                    android:textSize="22sp"
-                    tools:text="TextView" />
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="2dp"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:cardElevation="2dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:textColor="#7d8188"
+                        android:gravity="center_horizontal"
+                        tools:text="12:00 PM"
+                        />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="2dp"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:cardElevation="2dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:id="@+id/end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textSize="12sp"
+                        android:textColor="#7d8188"
+                        android:gravity="center_horizontal"
+                        tools:text="12:00 PM"
+                        />
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
             </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#9E9E9E"
-                    android:textColor="#ffffff"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:gravity="end"
-                    android:text="Home :" />
-
-                <TextView
-                    android:id="@+id/home_ground"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#9E9E9E"
-                    android:textColor="#ffffff"
-                    tools:text="My text" />
-
-            </LinearLayout>
-
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/slot"
+                android:textStyle="normal"
+                android:textSize="12sp"
+                android:textColor="#ea0800"
+                tools:text="6 more slots "
+                />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

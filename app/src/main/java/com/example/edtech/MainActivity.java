@@ -7,9 +7,7 @@ package com.example.edtech;
         import android.os.Bundle;
 
 
-
-
-        import android.view.KeyEvent;
+        import android.provider.ContactsContract;
         import android.view.MenuItem;
 
 
@@ -39,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        venueadapter customAdapter = new venueadapter(MainActivity.this, city(),seat(), ground_name(),home_ground());
+        venueadapter customAdapter = new venueadapter(MainActivity.this, city(),seat(), ground_name(),home_ground(),start(),end(),mentorImage());
         mRecyclerView.setAdapter(customAdapter); // set the Adapter to RecyclerView
         customAdapter.notifyDataSetChanged();
 
@@ -64,40 +62,6 @@ public class MainActivity extends AppCompatActivity {
         venueadapter3 customAdapter3 = new venueadapter3(MainActivity.this, city(),seat(), ground_name(),home_ground());
         mRecyclerView.setAdapter(customAdapter3); // set the Adapter to RecyclerView
         customAdapter3.notifyDataSetChanged();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -178,6 +142,22 @@ public class MainActivity extends AppCompatActivity {
         return list;
     }
 
+    public ArrayList<String> start() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Royal Challengers Bangalore");
+        list.add("Delhi Capitals");
+        list.add("Sunrisers Hyderabad");
+        list.add("Kings XI Punjab");
+        list.add("Rajasthan Royals");
+        list.add("Kolkata Knight Riders");
+        list.add("Kings XI Punjab");
+        list.add("Mumbai Indians");
+        list.add("-");
+        list.add("Chennai Super Kings");
+
+        return list;
+    }
+
     public ArrayList<String> home_ground() {
         ArrayList<String> list = new ArrayList<>();
         list.add("Royal Challengers Bangalore");
@@ -194,6 +174,27 @@ public class MainActivity extends AppCompatActivity {
         return list;
     }
 
+    public ArrayList<String> end() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Royal Challengers Bangalore");
+        list.add("Delhi Capitals");
+        list.add("Sunrisers Hyderabad");
+        list.add("Kings XI Punjab");
+        list.add("Rajasthan Royals");
+        list.add("Kolkata Knight Riders");
+        list.add("Kings XI Punjab");
+        list.add("Mumbai Indians");
+        list.add("-");
+        list.add("Chennai Super Kings");
+
+        return list;
+    }
+    public ArrayList<Integer> mentorImage() {
+        ArrayList<Integer> list = new ArrayList<>();
+
+
+        return list;
+    }
 
 
 
