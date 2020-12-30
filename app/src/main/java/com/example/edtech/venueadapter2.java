@@ -14,19 +14,19 @@ import java.util.ArrayList;
 
 public class venueadapter2 extends RecyclerView.Adapter<venueadapter2.MyViewHolder> {
 
-    private ArrayList<String> city ;
-    private ArrayList<String> seat;
-    private ArrayList<String> ground_name;
-    private ArrayList<String> home_ground;
+    private ArrayList<String> views ;
+    private ArrayList<String> headline;
+    private ArrayList<String> spokenBy;
+
 
     private Context context;
 
-    public venueadapter2(Context context, ArrayList<String> city, ArrayList<String> seat, ArrayList<String> ground_name, ArrayList<String> home_ground) {
+    public venueadapter2(Context context, ArrayList<String> views, ArrayList<String> headline, ArrayList<String> spokenBy) {
         this.context = context;
-        this.city = city ;
-        this.seat= seat;
-        this.ground_name = ground_name;
-        this.home_ground =home_ground;
+        this.views = views ;
+        this.headline= headline;
+        this.spokenBy = spokenBy;
+
     }
 
     @Override
@@ -40,29 +40,29 @@ public class venueadapter2 extends RecyclerView.Adapter<venueadapter2.MyViewHold
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
         // set the data in ite
-        holder.city  .setText(city.get(position));
-        holder.seat  .setText(seat.get(position));
-        holder.ground_name.setText(ground_name.get(position));
-        holder.home_ground .setText(home_ground.get(position));
+        holder.views  .setText(views.get(position));
+        holder.headline  .setText(headline.get(position));
+        holder.spokenBy.setText(spokenBy.get(position));
+
 
     }
 
 
     @Override
     public int getItemCount() {
-        return ground_name.size();
+        return views.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView city,seat,ground_name,home_ground;
+        TextView views,headline,spokenBy;
         public MyViewHolder(View itemView) {
             super(itemView);
 
             // get the reference of item view's
-            city         = (TextView) itemView.findViewById(R.id.city);
-            seat         = (TextView) itemView.findViewById(R.id.seat );
-            ground_name  = (TextView) itemView.findViewById(R.id.ground_name);
-            home_ground  = (TextView) itemView.findViewById(R.id.home_ground);
+            views         = (TextView) itemView.findViewById(R.id.views);
+            headline         = (TextView) itemView.findViewById(R.id.headline );
+            spokenBy         = (TextView) itemView.findViewById(R.id.spokenBy );
+
 
         }
     }

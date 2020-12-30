@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        venueadapter2 customAdapter2 = new venueadapter2(MainActivity.this, city(),seat(), ground_name(),home_ground());
+        venueadapter2 customAdapter2 = new venueadapter2(MainActivity.this, views(),headline(), spokenBy());
         mRecyclerView.setAdapter(customAdapter2); // set the Adapter to RecyclerView
         customAdapter2.notifyDataSetChanged();
 
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        venueadapter3 customAdapter3 = new venueadapter3(MainActivity.this, city(),seat(), ground_name(),home_ground());
+        venueadapter3 customAdapter3 = new venueadapter3(MainActivity.this, city(),seat(), ground_name(),home_ground(),start(),end(),mentorImage());
         mRecyclerView.setAdapter(customAdapter3); // set the Adapter to RecyclerView
         customAdapter3.notifyDataSetChanged();
 
@@ -96,96 +96,67 @@ public class MainActivity extends AppCompatActivity {
 
     public ArrayList<String> city() {
         ArrayList<String> list = new ArrayList<>();
-        list.add("Bengaluru");
-        list.add("Delhi");
-        list.add("Hyderabad ");
-        list.add("Indore");
-        list.add("Jaipur");
-        list.add("Kolkata");
-        list.add("Mohali");
-        list.add("Mumbai");
-        list.add("Pune");
-        list.add("Chennai");
+        list.add("2K Likes");
+        list.add("1.5K Likes");
+        list.add("3K Likes");
+        list.add("5K Likes");
+        list.add("1K Likes");
+
 
         return list;
     }
 
     public ArrayList<String> seat() {
         ArrayList<String> list = new ArrayList<>();
-        list.add("Seating Capacity: 35,000");
-        list.add("Seating Capacity: 41,820");
-        list.add("Seating Capacity: 39,408");
-        list.add("Seating Capacity: 30,000");
-        list.add("Seating Capacity: 23,185");
-        list.add("Seating Capacity: 68,000");
-        list.add("Seating Capacity: 26,000");
-        list.add("Seating Capacity: 33,000");
-        list.add("Seating Capacity: 42,000");
-        list.add("Seating Capacity: 33,500");
+        list.add("6 more slots");
+        list.add("8 more slots");
+        list.add("4 more slots");
+        list.add("3 more slots");
+        list.add("7 more slots");
 
         return list;
     }
 
     public ArrayList<String> ground_name() {
         ArrayList<String> list = new ArrayList<>();
-        list.add("M. Chinnaswamy Stadium");
-        list.add("Feroz Shah Kotla Ground");
-        list.add("Rajiv Gandhi Intl. Cricket Stadium");
-        list.add("Holkar Cricket Stadium");
-        list.add("Sawai Mansingh Stadium");
-        list.add("Eden Gardens");
-        list.add("IS Bindra Stadium");
-        list.add("Wankhede Stadium");
-        list.add("Maharashtra Cricket Association's International Stadium");
-        list.add("M. A. Chidambaram Stadium");
-
+        list.add("Abhinav Chhikara");
+        list.add("King Siddarth");
+        list.add("Chethan KVS");
+        list.add("Abhinav Chhikara");
+        list.add("Rajat");
         return list;
     }
 
     public ArrayList<String> start() {
         ArrayList<String> list = new ArrayList<>();
-        list.add("Royal Challengers Bangalore");
-        list.add("Delhi Capitals");
-        list.add("Sunrisers Hyderabad");
-        list.add("Kings XI Punjab");
-        list.add("Rajasthan Royals");
-        list.add("Kolkata Knight Riders");
-        list.add("Kings XI Punjab");
-        list.add("Mumbai Indians");
-        list.add("-");
-        list.add("Chennai Super Kings");
+        list.add("12:00 PM");
+        list.add("2:00 PM");
+        list.add("2:00 PM");
+        list.add("3:00 PM");
+        list.add("7:00 PM");
+
 
         return list;
     }
 
     public ArrayList<String> home_ground() {
         ArrayList<String> list = new ArrayList<>();
-        list.add("Royal Challengers Bangalore");
-        list.add("Delhi Capitals");
-        list.add("Sunrisers Hyderabad");
-        list.add("Kings XI Punjab");
-        list.add("Rajasthan Royals");
-        list.add("Kolkata Knight Riders");
-        list.add("Kings XI Punjab");
-        list.add("Mumbai Indians");
-        list.add("-");
-        list.add("Chennai Super Kings");
-
+        list.add("Founder of 10k Designers");
+        list.add("Product Designer at Headout");
+        list.add("Product Designer at Unacademy");
+        list.add("Product Designer at Headout");
+        list.add("Building something new");
         return list;
     }
 
     public ArrayList<String> end() {
         ArrayList<String> list = new ArrayList<>();
-        list.add("Royal Challengers Bangalore");
-        list.add("Delhi Capitals");
-        list.add("Sunrisers Hyderabad");
-        list.add("Kings XI Punjab");
-        list.add("Rajasthan Royals");
-        list.add("Kolkata Knight Riders");
-        list.add("Kings XI Punjab");
-        list.add("Mumbai Indians");
-        list.add("-");
-        list.add("Chennai Super Kings");
+        list.add("2:00 PM");
+        list.add("4:00 PM");
+        list.add("4:00 PM");
+        list.add("5:00 PM");
+        list.add("9:00 PM");
+
 
         return list;
     }
@@ -196,6 +167,46 @@ public class MainActivity extends AppCompatActivity {
         return list;
     }
 
+
+    public ArrayList<String> views() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("200K Views");
+        list.add("100K Views");
+        list.add("300K Views");
+        list.add("400K Views");
+        list.add("700K Views");
+
+
+        return list;
+    }
+
+
+
+    public ArrayList<String> headline() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Why UX is important for any Product");
+        list.add("Future of Interaction Design in Digital Era");
+        list.add("The whole world is full of competition");
+        list.add("Love is beautiful as AI");
+        list.add("Human VS AI - Who Wins");
+
+
+
+        return list;
+    }
+
+
+    public ArrayList<String> spokenBy() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("by Steven Cruce");
+        list.add("by James Gun");
+        list.add("by Someone");
+        list.add("by Rajat Dey");
+        list.add("by Indian's Genius");
+
+
+        return list;
+    }
 
 
 

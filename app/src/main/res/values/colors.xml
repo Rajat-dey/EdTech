@@ -10,4 +10,5 @@
     <color name="red_theme">#ea0800</color>
     <color name="bottom_text">#b2b2b2</color>
     <color name="hint_searchBar">#d2d2d2</color>
+    <color name="background_color">#f8f8f8</color>
 </resources>
